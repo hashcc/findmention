@@ -1,0 +1,272 @@
+*{
+padding: 0px;
+margin: 0px;
+}
+
+body{
+font-size: 85%;
+background: #d3e8f2 url(./bg.png) left top repeat-x;
+}
+
+h1,
+table thead{
+display: none;
+}
+
+q{
+color: #666;
+}
+
+/* リンク関係 */
+
+a,a:link{
+color: #999;
+text-decoration: none;
+}
+
+a:hover{
+color: #0084c0;
+text-decoration: underline;
+}
+
+div#mention_hatena span.nick a,
+div#mention_twitter span.name a{
+color: #0084c0;
+}
+
+h2 a,
+h2 a:link,
+h2 a:hover{
+color: white;
+}
+
+a img{
+border: none;
+}
+
+p.mentions_count_sort{
+margin: 10px 0px 0px 2%;
+}
+
+p.mentions_count_sort *:hover{
+cursor: pointer;
+}
+
+p.mentions_count_sort input{
+display: none;
+}
+
+p.mentions_count_sort label{
+display: inline-block;
+background: #F5F5F5 linear-gradient(to bottom, #FFFFFF, #E6E6E6) repeat-x;
+border: 1px solid #B3B3B3;
+box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+color: #333333;
+cursor: pointer;
+padding: 4px 12px;
+margin: 0px;
+text-align: center;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+p.mentions_count_sort label:first-child{
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+border-width: 1px 0px 1px 1px;
+}
+
+p.mentions_count_sort label:last-child{
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-width: 1px 1px 1px 0px;
+}
+
+p.mentions_count_sort input:checked+label{
+background: #F5F5F5 linear-gradient(to bottom, #E6E6E6, #FFFFFF) repeat-x;
+font-weight: bold;
+}
+
+div.mentions_content{
+width: 45%;
+max-width: 650px; /* for readability */
+float: left; 
+padding: 0px;
+border: 1px solid #9ebece;
+box-shadow: 0px 3px 2px #777;
+border-radius: 5px;
+}
+
+div.mentions_content div.comments{
+background-color: white;
+height: 400px;
+overflow: auto;
+}
+
+div.mentions_content div.comments div.error{
+width: 80%;
+background-color: #FCF8E3;
+border: 1px solid #FBEED5;
+border-radius: 4px 4px 4px 4px;
+padding: 10px;
+margin: 5%;
+color: #C09853;
+font-size: 120%;
+text-align: center;
+}
+
+div#mention_hatena{
+margin: 10px 1% 20px 2%;
+}
+
+div#mention_twitter{
+margin: 10px 2% 20px 1%;
+}
+
+/* for mobile */
+@media screen and (max-width: 640px) {
+  div.mentions_content{
+  width: 100%;
+  float: none;
+  border: none;
+  border-radius: 0px;
+  }
+  div#mention_hatena,
+  div#mention_twitter{
+  margin: 15px 0px;
+  }
+  div.mentions_content div.comments{
+  height: 200px;
+  }
+}
+
+div.mentions_content h2{
+border-bottom: 1px solid #999;
+padding: 5px 1em 5px 0.7em;
+color: white;
+font-weight: bold;
+text-shadow: 0px 1px 3px #333;
+letter-spacing: -1px;
+vertical-align: middle;
+}
+
+div.mentions_content h2 img{
+vertical-align: middle;
+margin-right: 5px;
+}
+
+div#mention_hatena h2{
+background: #2b65a9 url("transparent.png") left top repeat-x;
+}
+
+div#mention_twitter h2{
+background: #2ba8de url("transparent.png") left top repeat-x;
+}
+
+select{
+padding: 4px 4px 4px 4px;
+}
+
+select option{
+padding: 4px 8px 4px 4px;
+}
+
+div.comment{
+line-height: 140%;
+padding: 0.7em 1em;
+margin: 0px;
+border-bottom: 1px solid #e8e8e8;
+background-color: white;
+}
+
+div.comment:hover{
+background-color: #f5f5f5;
+}
+
+div.comment div.icon{
+width: 36px;
+padding-top: 0.2em;
+float: left;
+}
+
+div.comment div.user{
+margin-left: 43px;
+}
+
+div.comment div.icon img{
+vertical-align: bottom;
+border-radius: 5px;
+}
+
+div.comment div.user span.nick,
+div.comment div.user span.name,
+div.comment div.user span.timestamp{
+font-size: 95%;
+}
+
+div.comment div.user span.favorite{
+color: #fdb800;
+letter-spacing: -1px;
+margin-left: 0.5em;
+}
+
+div#mention_hatena div.comment div.user span.nick{
+vertical-align: top;
+}
+
+div#mention_hatena div.comment div.user span.timestamp{
+float: right;
+margin-left: 0.7em;
+}
+
+div#mention_hatena div.comment div.user p.content{
+padding-top: 0.25em;
+white-space: pre-wrap
+}
+
+div#mention_twitter div.comment div.user span.nick{
+color: #999;
+margin-left: 0.7em;
+}
+
+div#mention_twitter div.comment div.user span.timestamp{
+float: right;
+margin-left: 0.7em;
+}
+
+span.reply{
+color: gray;
+}
+
+/* はてなスター */
+
+img.hatena-star-add-button,
+span.hatena-star-comment-container{
+display: none !important;
+}
+
+/* 件数表示 */
+
+div.status{
+color: #333;
+font-size: 95%;
+background-color: #f6f6f6;
+padding: 0.7em 1em;
+border-top: 1px solid #ddd;
+}
+
+div.status a.button{
+float: right;
+}
+
+div.status a.button img{
+box-shadow: 1px 1px 2px #ccc;
+}
+
+div.status a.button:hover img{
+box-shadow: 1px 1px 2px #666;
+}
+
+div.status span.count{
+font-weight: bold;
+color: #555;
+}
